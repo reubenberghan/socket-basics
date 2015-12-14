@@ -5,7 +5,8 @@ socket.on('connect', function() {
 });
 
 socket.on('message', function(message) {
-	$('div.message-container').append('<p>New message: ' + message.text + '</p>');
+	var localTime = moment.utc(message.timestamp).local().format('h:mm a');
+	$('div.message-container').append('<p>' + localTime + ': ' + message.text + '</p>');
 });
 
 // handles submitting of new message
