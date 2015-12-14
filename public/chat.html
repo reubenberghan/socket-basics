@@ -10,16 +10,22 @@
 			
 			<header>
 				<h1>Socket.io Chat App</h1>
-				<h2>Join the Chat!</h2>
+				<p class="connection-message"></p>
 			</header>
 			
 			<hr>
 			
-			<form class="name-form" action="/chat.html">
-				<label for="message">What's your chat name:</label>
-				<input type="text" name="name">
-				<input type="submit" value="Join Chat">
+			<div class="message-container"></div>
+			
+			<form class="message-form">
+				<label for="message">Type your message:</label>
+				<input type="text" name="message">
+				<input type="submit">
 			</form>
+			
+			<div class="btn-container">
+				<a href="/index.html">Change Details</a>
+			</div>
 			
 		</div>
 		

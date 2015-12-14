@@ -26,6 +26,14 @@ header {
 	margin-bottom: 25px;
 }
 
+a, a:hover, a:focus {
+	text-decoration: none;
+	color: #333;
+	font-size: 0.8em;
+	text-align: center;
+	display: block;
+}
+
 header > h1 {
 	margin-bottom: 15px;
 }
@@ -39,7 +47,7 @@ form > label {
 	display: block;
 }
 
-form > input {
+form > input, a {
 	width: 100%;
     padding: 7px;
     box-sizing: border-box;
@@ -49,7 +57,7 @@ form > input {
 	margin-bottom: 10px;
 }
 
-form > input[type='submit']:hover {
+form > input[type='submit']:hover, a:hover {
 	background: #ccc;
 	color: #fff;
 	cursor: pointer;
@@ -71,4 +79,8 @@ form > input[type='submit']:hover {
 	box-sizing: border-box;
 	height: 125px;
 	overflow: scroll;
+}
+
+.btn-container {
+    padding: 0 5px;
 }
