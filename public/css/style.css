@@ -23,7 +23,7 @@ hr {
 
 header {
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 a, a:hover, a:focus {
@@ -35,7 +35,7 @@ a, a:hover, a:focus {
 }
 
 header > h1 {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 form {
@@ -69,6 +69,10 @@ form > input[type='submit']:hover, a:hover {
 	margin: 0 auto;
 	background: #fff;
 	padding: 25px 0;
+}
+
+.room-name {
+	margin-bottom: 10px;
 }
 
 .message-container {

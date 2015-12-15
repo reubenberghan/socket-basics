@@ -3,11 +3,14 @@ var chatName = getQueryVariable('name') || 'Anonymous',
 	socket = io(),
 	connectionMessage = $('p.connection-message'),
 	messageContainer = $('div.message-container');
+	
+if (room) { $('.room-name').text(room + ' Chat Room'); }
 
 socket.on('connect', function() {
-	connectionMessage.html('Connected to socket.io server!');
+	connectionMessage.text('Connected to socket.io server!');
 	if (!chatName || !room) { return; }
 	messageContainer.append('<p><strong>' + moment().format('h:mm a') + ':</strong> ' + chatName + ' joined ' + room + '...</p>');
+	socket.emit('joinRoom', { name: chatName, room: room });
 });
 
 socket.on('message', function(message) {
